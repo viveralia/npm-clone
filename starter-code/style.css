@@ -1,0 +1,383 @@
+/* Importing the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+/* Browser reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --mainFont: 'Open Sans', sans-serif;
+  --grey: #373d47;
+  --lightGrey: #818991;
+  --lightWhite: rgba(255, 255, 255, 0.8);
+  --lighterWhite: rgba(255, 255, 255, 0.5);
+  --pureWhite: #fff;
+  --red: #c12127;
+  --orange: #f09133;
+  --navy: #263547;
+}
+
+body {
+  font-family: var(--mainFont);
+  -webkit-font-smoothing: antialiased;
+}
+
+/**********************
+******* General *******
+**********************/
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  color: var(--pureWhite);
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.75em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+p {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.spacing-y {
+  padding: 6rem 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--pureWhite);
+  font-weight: 400;
+  display: inline-block;
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.red {
+  background: var(--red);
+}
+
+.washed-navy {
+  background: var(--grey);
+}
+
+.bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/********************
+******** Nav ********
+********************/
+nav {
+  background: var(--red);
+  color: var(--lightWhite);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+nav .top-left .heart {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.top-links li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Removes the margin for the first and last elements of the list, since they don't need it*/
+.top-links li:first-child {
+  margin-left: 0;
+}
+
+.top-links li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: var(--lightWhite);
+  text-decoration: none;
+}
+
+/*******************
+****** Header ******
+*******************/
+header {
+  background-image: url(./images/city-scape.svg);
+  background-color: #225e7f;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Brand */
+header .top img {
+  width: 85px;
+}
+
+/* Search Bar */
+header .top form {
+  flex: 1;
+  padding: 0 15px;
+  display: flex;
+}
+
+header .top form input,
+header .top form button {
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--lightWhite);
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 0 !important;
+}
+
+header .top form input::placeholder {
+  color: var(--lighterWhite);
+}
+
+header .top form input:focus,
+header .top form button:focus {
+  outline: 0;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.425);
+}
+
+header .top form button {
+  width: 40px;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .top form button img {
+  width: 14px;
+  filter: invert(100%);
+  opacity: 0.5;
+}
+
+/* Sign in */
+header .top .authentication {
+  display: flex;
+  align-items: center;
+}
+
+header .top .authentication,
+header .top .authentication a {
+  color: var(--lightWhite);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header .top .authentication span {
+  padding: 0 5px;
+}
+
+header .top .authentication img {
+  width: 40px;
+  margin-left: 5px;
+}
+
+/* Text */
+header .container .text {
+  max-width: 500px;
+  padding: 5rem 0;
+  color: var(--lightWhite);
+}
+
+header .container .text p {
+  margin-bottom: 1.325rem;
+}
+
+/*******************
+***** npm Orgs *****
+*******************/
+.orgs {
+  background: var(--navy);
+  color: var(--lightWhite);
+}
+
+.orgs .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orgs .container .img-container,
+.orgs .container .text {
+  width: 50%;
+}
+
+.orgs .container .img-container img {
+  width: 100%;
+}
+
+.orgs .container .text {
+  margin-left: 5rem;
+}
+
+.orgs .container .text ul {
+  padding-left: 1rem;
+}
+
+.orgs .container .text ul li {
+  margin-bottom: 1rem;
+}
+
+.orgs .container .text .button {
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+/*******************
+***** What is *****
+*******************/
+.what {
+  background-image: url(./images/forklift.svg);
+  padding: 6rem 0 10rem 0;
+  color: var(--lightWhite);
+}
+
+.what .text {
+  max-width: 400px;
+}
+
+.what .text .button {
+  margin-top: 1rem;
+}
+
+/************************************
+***** What can you make with... *****
+************************************/
+.blocks {
+  text-align: center;
+}
+
+.blocks h2,
+.blocks h3 {
+  color: var(--grey);
+}
+
+.blocks p {
+  color: var(--lightGrey);
+}
+
+.blocks h3 {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.blocks .steps {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.blocks .steps p {
+  width: 90%;
+  margin: auto;
+}
+
+.blocks .steps p a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+/*******************
+**** Responsive ****
+*******************/
+@media (max-width: 768px) {
+  /* General */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  /* Nav */
+  nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  nav ul {
+    margin: 0 2rem;
+  }
+  .top-links li:last-child {
+    margin-right: 10px;
+  }
+  /* Header */
+  header {
+    background: linear-gradient(#235978, #206386);
+  }
+  header .top img {
+    width: 55px;
+  }
+  header .top .authentication .text {
+    display: none;
+  }
+  header .top .authentication img {
+    width: 30px;
+    margin: 0;
+  }
+  header .container .text {
+    padding: 6rem 0;
+  }
+
+  /* Orgs */
+  .orgs .container {
+    flex-direction: column;
+  }
+  .orgs .container .img-container,
+  .orgs .container .text {
+    width: 100%;
+  }
+  .orgs .container .text {
+    margin: 2.5rem 0 0 0;
+  }
+  /* What */
+  .what {
+    padding: 10rem 0 6rem 0;
+  }
+  /* Blocks */
+  .blocks .container .steps {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+}
